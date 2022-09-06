@@ -1,0 +1,38 @@
+public class BitManipulation {
+	static void findSingleValue(int[] arr) {
+		int size=arr.length;
+		int res=arr[0];
+		for(int i=1;i<size;i++)
+		{
+			res=res^arr[i];
+		}
+		System.out.println(res);
+	}
+	static void swapNumbers(int i,int j)
+	{	System.out.println("before the swap\n"+i+" "+j);
+		i=i^j;
+		j=i^j;
+		i=i^j;
+		System.out.println("After the swap\n"+i+" "+j);
+	}
+	static void cheackEvenOdd(int n)
+	{
+		if((n&1)!=0)//Add 1 with n variable if result is 0 number is even
+		{
+			System.out.println(n+" OddNumber");
+		}
+		else
+		{
+			System.out.println(n+" Even Number");
+		}
+	}
+	public static void main(String[] args) {
+		int n=22,i=10,j=5;
+		int[] array= {1,1,2,2,3,3,4,5,5};
+		cheackEvenOdd(n);//1.call the method
+		swapNumbers(i,j);//2.call the method
+		findSingleValue(array);//3.call the method
+		
+	}
+
+}
